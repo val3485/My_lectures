@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try</title>
+</head>
+
+<body>
+    <style>
+        body{
+            background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zN19hX21pbmltYWxfYW5kX2xlc3NfZGV0YWlsX2lsbHVzdHJhdGlvbl9vZl9jYV9jOGZmMjUyYy0wNWU2LTRmNzAtYTY4My1lOWUyMzRkOGE0NDBfMS5qcGc.jpg);
+            background-size:contain;
+        }
+        #main-con{
+            border-color: brown;
+            border-width: 5px;
+            border-style: solid;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .left-con{
+            background-color:rgb(255, 255, 255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 5px;
+            width: 10%;
+            gap: 5px;
+            flex-direction: row;
+            display: flex;
+            writing-mode:vertical-lr;
+            /*ginawnag vertical items from left to right (lr)*/
+            text-orientation: upright;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        .left-con-img,.right-con-img{
+            background-color: rgba(88, 16, 156, 0.425);
+            backdrop-filter: blur(10px);
+            padding: 1em;
+            display: flex;
+            align-items: flex-start;
+            max-width: 24em;
+            max-height: 10em; 
+            /* em - is like multiplied by the font if 
+            yung font mo 5 tas em mo 10 edi magiging space nta is 50px */
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        .right-body,.left-body{
+            flex:1;
+        }
+        #img{
+            margin-right: 1em;
+        }
+        #img-right{
+            margin-left: 1em;
+            order: 1; /*inoorder nya yung mga items tas start is 0 */
+            /* example image 1 walang order so sya una tas img 2 may order:1; edi sya sunod*/
+            /* output: img1 im2 */
+            /*Ascending order*/
+        }
+    </style>
+    <div id="main-con">
+        <div class="left-con">
+            <div class="text" style="color: rgb(255, 255, 255);">BLURRED EFFECT</div>
+            <div style="background-color: pink;width: 100px;height: 40px;"></div>
+            <div style="background-color: rgb(194, 255, 192);width: 100px;height: 40px;"></div>
+            <div style="background-color: #c9c0ff;width: 100px;height: 40px;"></div>
+        </div>
+
+        <div class="left-con-img">
+            <img  id="img" src="https://i.pinimg.com/enabled_lo/564x/13/3c/91/133c910bf137ab9dccfa4fb85c7b4b9e.jpg" style="height: 150px;width: 150px;">
+            <div class="right-body">
+                <div class= "text" style="color: rgb(255, 255, 255);"> Left Picture</div>
+            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. 
+                Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+            </div>
+        </div>
+
+        <div class="right-con-img">
+            <img  id="img-right" src="https://i.pinimg.com/564x/7c/94/2b/7c942bd1a8789876b89dd32402500c90.jpg" style="height: 150px;width: 150px;">
+            <div class="left-body">
+                <div class= "text" style="color: rgb(255, 255, 255);"> Right Picture</div>
+            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. 
+                Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+            </div>
+        </div>
+
+
+    </div>
+   
+    
+</body>
+</html>
